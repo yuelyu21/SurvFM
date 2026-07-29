@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "survfm-rmst"
+version = "0.2.0"
+description = "An RMST target interface for tabular models in right-censored survival prediction."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  {name = "Yue Lyu"},
+  {name = "Steven H. Lin"},
+  {name = "Xuelin Huang"},
+  {name = "Ziyi Li"}
+]
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = [
+  "survival analysis",
+  "restricted mean survival time",
+  "pseudo-observations",
+  "tabular foundation models",
+  "right censoring"
+]
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Medical Science Apps."
+]
+
+[project.urls]
+Homepage = "https://yuelyu21.github.io/SurvFM/"
+Documentation = "https://yuelyu21.github.io/SurvFM/"
+Repository = "https://github.com/yuelyu21/SurvFM"
+Issues = "https://github.com/yuelyu21/SurvFM/issues"
+
+[project.optional-dependencies]
+sklearn = ["scikit-learn>=1.2"]
+tabpfn = ["scikit-learn>=1.2", "tabpfn"]
+tabicl = ["scikit-learn>=1.2", "tabicl"]
+tabdpt = ["scikit-learn>=1.2", "tabdpt"]
+tabh2o = ["scikit-learn>=1.2", "requests>=2.31"]
+mitra = ["scikit-learn>=1.2", "autogluon.tabular>=1.5"]
+metrics = ["scikit-survival"]
+docs = [
+  "mkdocs-material>=9.5",
+  "mkdocstrings[python]>=0.25"
+]
+dev = [
+  "pytest>=8",
+  "build>=1.2"
+]
+
+[project.scripts]
+survfm-rmst = "survfm.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["survfm*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

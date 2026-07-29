@@ -1,0 +1,8 @@
+include README.md
+include LICENSE
+include CITATION.cff
+include CHANGELOG.md
+include mkdocs.yml
+recursive-include website *.md *.css *.png
+recursive-include examples *.py
+recursive-include tests *.py

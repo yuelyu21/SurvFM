@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use SurvFM, please cite this software and the accompanying article when available."
+title: "SurvFM: an RMST target interface for right-censored survival prediction"
+type: software
+version: 0.2.0
+date-released: 2026-07-29
+license: MIT
+repository-code: "https://github.com/yuelyu21/SurvFM"
+url: "https://yuelyu21.github.io/SurvFM/"
+authors:
+  - family-names: Lyu
+    given-names: Yue
+    affiliation: "Department of Biostatistics, The University of Texas MD Anderson Cancer Center"
+  - family-names: Lin
+    given-names: "Steven H."
+    affiliation: "Department of Thoracic Radiation Oncology, The University of Texas MD Anderson Cancer Center"
+  - family-names: Huang
+    given-names: Xuelin
+    affiliation: "Department of Biostatistics, The University of Texas MD Anderson Cancer Center"
+  - family-names: Li
+    given-names: Ziyi
+    affiliation: "Department of Biostatistics, The University of Texas MD Anderson Cancer Center"
