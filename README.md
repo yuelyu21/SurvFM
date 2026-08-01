@@ -2,6 +2,7 @@
 
 [![Tests](https://github.com/yuelyu21/SurvFM/actions/workflows/test.yml/badge.svg)](https://github.com/yuelyu21/SurvFM/actions/workflows/test.yml)
 [![Documentation](https://github.com/yuelyu21/SurvFM/actions/workflows/docs.yml/badge.svg)](https://yuelyu21.github.io/SurvFM/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21735310.svg)](https://doi.org/10.5281/zenodo.21735310)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## Reusable tabular prediction for right-censored survival outcomes
@@ -105,8 +106,12 @@ python -m build
 
 ## Citation
 
-Citation metadata are provided in [`CITATION.cff`](CITATION.cff). The citation
-record will be updated with the article DOI when available.
+The archived `v0.2.0` software release is available at
+[doi:10.5281/zenodo.21735311](https://doi.org/10.5281/zenodo.21735311).
+The [all-versions DOI](https://doi.org/10.5281/zenodo.21735310) resolves to the
+latest archived release. Citation metadata are provided in
+[`CITATION.cff`](CITATION.cff); the record will be updated with the article DOI
+when available.
 
 ## License
 
