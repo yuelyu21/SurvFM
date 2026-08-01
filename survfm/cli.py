@@ -1,4 +1,4 @@
-"""Command-line diagnostics for the private SurvFM-RMST preview."""
+"""Command-line diagnostics for the SurvFM research package."""
 
 from __future__ import annotations
 

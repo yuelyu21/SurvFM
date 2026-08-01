@@ -15,7 +15,7 @@ configured, but never prints the credential value.
 
 For a reproducible analysis, record:
 
-- SurvFM project commit and SurvFM-RMST package version;
+- SurvFM project commit and package version;
 - Python and dependency versions;
 - backbone package and checkpoint identifiers;
 - device, random seed and model constructor arguments;

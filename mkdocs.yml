@@ -1,5 +1,5 @@
 site_name: SurvFM
-site_description: Documentation for SurvFM and its RMST target interface
+site_description: Documentation for SurvFM survival prediction with tabular models
 site_url: "https://yuelyu21.github.io/SurvFM/"
 repo_url: "https://github.com/yuelyu21/SurvFM"
 repo_name: "yuelyu21/SurvFM"
@@ -65,11 +65,17 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
 
 extra_css:
   - assets/stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 copyright: Copyright &copy; 2026 Yue Lyu and contributors. Released under the MIT License.

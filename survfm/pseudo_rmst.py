@@ -1,4 +1,4 @@
-"""RMST and pseudo-observation utilities for SurvFM-RMST.
+"""RMST and pseudo-observation utilities for SurvFM.
 
 These functions intentionally avoid heavy survival-package dependencies so that
 the core target-construction logic remains easy to audit. Event indicators use

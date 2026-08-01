@@ -1,4 +1,4 @@
-"""Metric helpers for SurvFM-RMST reproducibility."""
+"""Metric helpers for SurvFM reproducibility."""
 
 from __future__ import annotations
 

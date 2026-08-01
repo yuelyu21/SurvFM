@@ -1,4 +1,4 @@
-"""Minimal local SurvFM-RMST example using a synthetic censored cohort."""
+"""Minimal local SurvFM example using a synthetic censored cohort."""
 
 import numpy as np
 import pandas as pd

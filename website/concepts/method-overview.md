@@ -1,9 +1,8 @@
 # Method overview
 
-SurvFM is the broader target-interface project. Its current validated method,
-SurvFM-RMST, separates the survival-specific part of the problem from the
-tabular prediction engine. One outer training fold and one restriction horizon
-define the complete workflow.
+SurvFM separates RMST target construction from the tabular prediction engine.
+One outer training fold and one restriction horizon define the complete
+workflow.
 
 1. **Observed data.** Supply baseline covariates, observed follow-up and a binary
    first-event indicator.
@@ -24,7 +23,7 @@ requires constructing a new target and fitting a horizon-specific model.
 
 ## Minimal mathematical map
 
-<div class="method-map" aria-label="SurvFM RMST method map">
+<div class="method-map" aria-label="SurvFM method map">
   <span>Right-censored training fold</span>
   <span aria-hidden="true">→</span>
   <span>Kaplan–Meier RMST at τ</span>

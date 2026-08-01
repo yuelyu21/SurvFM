@@ -13,7 +13,7 @@
         - save
         - load
 
-::: survfm.model_wrappers.fit_survfm_rmst
+::: survfm.model_wrappers.fit_survfm
     options:
       show_root_heading: true
       show_root_full_path: false

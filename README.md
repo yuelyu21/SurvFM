@@ -4,14 +4,14 @@
 [![Documentation](https://github.com/yuelyu21/SurvFM/actions/workflows/docs.yml/badge.svg)](https://yuelyu21.github.io/SurvFM/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## RMST target interface for right-censored survival prediction
+## Reusable tabular prediction for right-censored survival outcomes
 
-SurvFM is the broader project for target-side adaptation of tabular models to
-survival outcomes. SurvFM-RMST is the current validated method: a
-target-side interface that constructs exact jackknife pseudo-observations for
-restricted mean survival time (RMST) and fits an interchangeable tabular
-backbone without changing that backbone's architecture or regression
-objective.
+SurvFM is a model-agnostic framework that adapts tabular prediction models to
+right-censored survival outcomes. It constructs exact jackknife
+pseudo-observations for restricted mean survival time (RMST) and supplies the
+same horizon-specific regression target to interchangeable tabular backbones.
+Backbone-specific configurations are named SurvFM-TabPFN, SurvFM-TabICL,
+SurvFM-TabDPT, SurvFM-TabH2O and SurvFM-MITRA.
 
 > **Research software.** SurvFM is intended for methodological research and
 > retrospective evaluation. It has not been validated for clinical
@@ -34,13 +34,15 @@ for isolated environments and optional backbone dependencies.
 ## Quick start
 
 ```python
-from survfm import SurvFMRMSTRegressor
+from survfm import fit_survfm
 
-model = SurvFMRMSTRegressor(
+model = fit_survfm(
+    X_train,
+    time_train,
+    event_train,
     backbone="random_forest",
     tau=365.0,
 )
-model.fit(X_train, time_train, event_train)
 
 predicted_rmst = model.predict(X_test)
 risk_score = model.predict_risk(X_test)  # negative predicted RMST
@@ -49,7 +51,13 @@ risk_score = model.predict_risk(X_test)  # negative predicted RMST
 The default backbone is TabPFN:
 
 ```python
-model = SurvFMRMSTRegressor(backbone="tabpfn", tau=365.0)
+model = fit_survfm(
+    X_train,
+    time_train,
+    event_train,
+    backbone="tabpfn",
+    tau=365.0,
+)
 ```
 
 Install the corresponding optional dependency first with

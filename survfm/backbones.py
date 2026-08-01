@@ -1,4 +1,4 @@
-"""Lazy backbone registry for the SurvFM-RMST target interface.
+"""Lazy backbone registry for the SurvFM framework.
 
 Optional dependencies are imported only when their corresponding backbone is
 constructed. API credentials are deliberately read at request time and are

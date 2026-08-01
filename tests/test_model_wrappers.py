@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from survfm import SurvFMRMSTRegressor, fit_survfm_rmst
+from survfm import SurvFMRMSTRegressor, fit_survfm, fit_survfm_rmst
 
 
 class MeanEstimator:
@@ -28,6 +28,17 @@ def test_fit_survfm_rmst_returns_rmst_predictions_and_risk():
     assert np.all((0.0 <= pred) & (pred <= 3.0))
     assert np.allclose(risk, -pred)
     assert model.pseudo_targets_.shape == (4,)
+
+
+def test_fit_survfm_short_alias_matches_legacy_entry_point():
+    X = np.array([[0.0], [1.0], [2.0], [3.0]])
+    time = np.array([1.0, 2.0, 3.0, 4.0])
+    event = np.array([1, 0, 1, 0])
+
+    model = fit_survfm(X, time, event, tau=3.0, estimator=MeanEstimator())
+
+    assert isinstance(model, SurvFMRMSTRegressor)
+    assert np.all((0.0 <= model.predict(X[:2])) & (model.predict(X[:2]) <= 3.0))
 
 
 def test_survfm_rmst_can_leave_predictions_unclipped():

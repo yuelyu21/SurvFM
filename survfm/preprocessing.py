@@ -1,4 +1,4 @@
-"""Small preprocessing helper used by SurvFM-RMST benchmark scripts."""
+"""Small preprocessing helper used by SurvFM benchmark scripts."""
 
 from __future__ import annotations
 

@@ -1,4 +1,4 @@
-"""Public SurvFM-RMST research package.
+"""Public SurvFM research package.
 
 The package exposes the stable pieces needed to inspect and reuse the method:
 RMST functionals, exact jackknife pseudo-RMST targets, RMST-scale metrics and
@@ -14,7 +14,12 @@ from .metrics import (
 )
 from .backbones import BackboneInfo, create_backbone, get_backbone_info, list_backbones
 from .horizons import HorizonSelection, select_rmst_horizon
-from .model_wrappers import PseudoRMSTRegressor, SurvFMRMSTRegressor, fit_survfm_rmst
+from .model_wrappers import (
+    PseudoRMSTRegressor,
+    SurvFMRMSTRegressor,
+    fit_survfm,
+    fit_survfm_rmst,
+)
 from .pseudo_rmst import (
     jackknife_pseudo_rmst,
     jackknife_pseudo_rmst_fast_exact,
@@ -31,6 +36,7 @@ __all__ = [
     "BackboneInfo",
     "HorizonSelection",
     "create_backbone",
+    "fit_survfm",
     "fit_survfm_rmst",
     "get_backbone_info",
     "ipcw_rmst_rmse",

@@ -1,4 +1,4 @@
-"""User-facing estimator for the SurvFM-RMST target interface."""
+"""User-facing estimator for the SurvFM framework."""
 
 from __future__ import annotations
 
@@ -212,15 +212,15 @@ class PseudoRMSTRegressor:
         with Path(path).open("rb") as handle:
             model = pickle.load(handle)
         if not isinstance(model, cls):
-            raise TypeError("The artifact is not a SurvFM-RMST estimator.")
+            raise TypeError("The artifact is not a SurvFM estimator.")
         return model
 
 
 class SurvFMRMSTRegressor(PseudoRMSTRegressor):
-    """Named user-facing alias for the SurvFM-RMST estimator."""
+    """SurvFM estimator using pseudo-RMST target construction."""
 
 
-def fit_survfm_rmst(
+def fit_survfm(
     X_train,
     time,
     event,
@@ -235,7 +235,7 @@ def fit_survfm_rmst(
     clip_targets: bool = True,
     clip_predictions: bool = True,
 ) -> SurvFMRMSTRegressor:
-    """Fit SurvFM-RMST in one call."""
+    """Fit SurvFM in one call using pseudo-RMST targets."""
 
     model = SurvFMRMSTRegressor(
         estimator=estimator,
@@ -249,3 +249,7 @@ def fit_survfm_rmst(
         clip_predictions=clip_predictions,
     )
     return model.fit(X_train, time, event)
+
+
+# Backward-compatible name retained for existing scripts and serialized workflows.
+fit_survfm_rmst = fit_survfm
