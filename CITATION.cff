@@ -3,7 +3,7 @@ message: "If you use SurvFM, please cite this software and the accompanying arti
 title: "SurvFM: an RMST target interface for right-censored survival prediction"
 type: software
 version: 0.2.0
-date-released: 2026-07-31
+date-released: 2026-08-01
 license: MIT
 repository-code: "https://github.com/yuelyu21/SurvFM"
 url: "https://yuelyu21.github.io/SurvFM/"
