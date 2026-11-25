@@ -39,6 +39,7 @@ nav:
       - Backbone setup: guides/backbones.md
       - Mixed data: guides/mixed-data.md
       - Save and load: guides/persistence.md
+      - Experimental curves and IBS: guides/survival-curves.md
   - API:
       - Estimator: api/estimator.md
       - Targets and horizons: api/targets.md
