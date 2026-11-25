@@ -51,6 +51,7 @@ tabdpt = ["scikit-learn>=1.2", "tabdpt"]
 tabh2o = ["scikit-learn>=1.2", "requests>=2.31"]
 mitra = ["scikit-learn>=1.2", "autogluon.tabular>=1.5"]
 metrics = ["scikit-survival"]
+curves = ["scipy>=1.10", "scikit-learn>=1.2", "scikit-survival"]
 docs = [
   "mkdocs-material>=9.5",
   "mkdocstrings[python]>=0.25"

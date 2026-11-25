@@ -10,3 +10,4 @@ site/
 output/playwright/
 .playwright-cli/
 .DS_Store
+runs/

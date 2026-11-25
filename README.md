@@ -84,6 +84,29 @@ The output is a horizon-specific prediction targeting covariate-conditional
 RMST. It is not a full survival curve, treatment effect or deployment-ready
 clinical decision rule.
 
+## Experimental survival curves and IBS
+
+The [survival-curve example](examples/experimental_survival_curves.py) adds
+either an out-of-fold Cox mapping or multi-horizon RMST reconstruction to the
+existing estimator. Both return a patient-by-time survival-probability matrix
+that can be passed to an IBS evaluator.
+
+```bash
+python -m pip install -e ".[curves]"
+python examples/experimental_survival_curves.py --method oof-cox --output runs/cox-demo
+python examples/experimental_survival_curves.py --method multihorizon --output runs/multihorizon-demo
+```
+
+These commands use a lightweight `RFReg-RMST` backbone on synthetic data. For
+SurvFM-TabPFN, install `.[curves,tabpfn]` and add `--backbone tabpfn`.
+Each run saves its split, time grid, predictions, model configuration and IBS
+evaluation status. Existing output directories are never overwritten.
+
+These are **experimental extensions**, with additional assumptions and fitting
+cost. They do not change the default RMST estimator or establish survival-curve
+accuracy. See the [benchmark integration guide](website/guides/survival-curves.md)
+for the reusable interface, output format and evaluation protocol.
+
 ## Documentation
 
 Read the complete documentation at
